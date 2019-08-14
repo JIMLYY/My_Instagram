@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from ins.models import Post
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 class HelloWorld(TemplateView):
     template_name = 'test.html'
 
@@ -15,15 +15,17 @@ class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_create.html'
     fields = '__all__'
-
+    login_url = 'login'
+    
 class PostUpdateView(UpdateView):
     model = Post
     template_name = 'post_update.html'
     fields = ['title']
+    
 
 class PostDeleteView(DeleteView):
     model = Post
