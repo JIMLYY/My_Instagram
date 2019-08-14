@@ -29,6 +29,9 @@
                                 {{ post.get_like_count }} like{% if post.get_like_count > 1 %}s{% endif %}
                         {% endif %}
                 </div>
+                <section class="input-row">
+                        <i class="fa fa-heart-o submit-like" aria-hidden="true"></i>
+                </section>
             </div>
         </div>
     {% endfor %}
