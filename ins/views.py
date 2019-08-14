@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from ins.models import Post
 from django.urls import reverse, reverse_lazy
-from django.contrib.auth.forms import UserCreationForm
+from ins.forms import CustomUserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 class HelloWorld(TemplateView):
     template_name = 'test.html'
@@ -33,6 +33,6 @@ class PostDeleteView(DeleteView):
     success_url = reverse_lazy("posts")
 
 class SignUp(CreateView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     template_name = 'signup.html'
     success_url = reverse_lazy("login")
