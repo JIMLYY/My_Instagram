@@ -18,7 +18,7 @@ My Instagran also features Like function where you can like the posts of your co
 
 ## Test :octocat:
 My Instagram demo has been employed on Heroku. If you would like to explore on My Instagram,
-I have created a account for you. Please visit ```https://fathomless-crag-81683.herokuapp.com//auth/login/```<br>
+I have created a account for you. Please visit ```https://fathomless-crag-81683.herokuapp.com/auth/login/```<br>
 Your account would be:<br>
 * User: shanks <br>
 * Password: strawhat<br>
