@@ -129,4 +129,5 @@ LOGIN_REDIRECT_URL = 'posts'
 
 LOGOUT_REDIRECT_URL = 'posts'
 AUTH_USER_MODEL = 'ins.InsUser'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
