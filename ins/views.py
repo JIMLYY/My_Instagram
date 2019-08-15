@@ -1,7 +1,7 @@
 from annoying.decorators import ajax_request
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from ins.models import Post, Like
+from ins.models import Post, Like, InsUser, UserConnection
 from django.urls import reverse, reverse_lazy
 from ins.forms import CustomUserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -12,9 +12,15 @@ class PostsView(ListView):
     model = Post
     template_name = 'index.html'
 
+   
+
 class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+class UserDetailView(DetailView):
+    model = InsUser
+    template_name = 'user_detail.html'
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
