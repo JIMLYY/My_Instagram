@@ -1,7 +1,7 @@
 # My_Instagram
 
 ## Introduction
-In this project, I built my own Instagram using Django as back-end framework. My Intagram hsa several important features
+In this project, I built my own Instagram using Django as back-end framework. My Intagram has several important features
 including Create, Read, Update, Delete (CRUD). Moreover, My Instagram also possesses Friend/Connection function, in which you
 are able to make connections with others. Making connections can allow you to see the pictures posted by your friends. Additionally,
 My Instagran also features Like function where you can like the posts of your connections.
